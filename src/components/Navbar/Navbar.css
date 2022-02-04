@@ -1,0 +1,26 @@
+button.active {
+    background: #1f1f1f;
+}
+
+input {
+    color: white;
+    background: #1f1f1f;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+select {
+    color: white;
+    background: #1f1f1f;
+    border: none;
+    width: 50px;
+    border-radius: 10px; 
+}
+
