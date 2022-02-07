@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import './Navbar.css'
-import { GoSearch } from 'react-icons/go';
+import SearchIcon from '@mui/icons-material/Search';
+
 
 
 
@@ -9,7 +10,8 @@ import { GoSearch } from 'react-icons/go';
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px;
+    padding: 20px 100px;
+    margin-bottom: 30px;
 `;
 
 const Buttons = styled.div`
@@ -40,11 +42,14 @@ const Navbar = () => {
     return (
         <Nav>
             <Buttons>
-               <Button className="active">Coins</Button>
+                <Button className="active">Coins</Button>
                <Button>Portfolio</Button>
             </Buttons>
             <Forms>
-                <input type="text" placeholder="search" name="search"/>
+                <div className="search">
+                     <SearchIcon />
+                    <input type="text" placeholder="search" name="search"/>
+                </div>
                 <select select="select">
                     <option value="usd">USD</option>
                     <option value="euro">Euro</option>

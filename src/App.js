@@ -1,26 +1,28 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {Navbar} from 'components';
-import Coins from "./components/Coins";
+import {Home} from 'pages';
+import {Coin} from 'pages';
 import styled from 'styled-components';
-import axios from 'axios'
 
 const Container = styled.div`
   width: 960px;
-  background: black;
-  height: 90vh;
+  background: #1f1f1f;
   margin: 10px auto;
   border-radius: 10px;
 `
 
 function App() {
   return (
-    <Container>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Coins />} />
-      </Routes>
-    </Container>
+   <Router>
+      <Navbar />
+      <Container>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/:coinId" component={Coin} />
+        </Switch>
+      </Container>
+   </Router>
   );
 }
 
