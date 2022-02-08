@@ -1,9 +1,7 @@
 import axios from 'axios'
-import { green } from '@mui/material/colors';
 import React from 'react'
 import styled from 'styled-components';
 import {ListItem} from 'components';
-import {Coin} from 'pages';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Titles = styled.div`
@@ -58,8 +56,8 @@ class CoinsList extends React.Component {
             {
                 this.state.coins.map((coin) => {
                     return (
-                    <Link to={`${coin.id}`} component={Coin}>
-                         <ListItem coin={coin} key={coin.id} />
+                    <Link to={`/${coin.id}`} key={coin.id} >
+                         <ListItem coin={coin}/>
                     </Link>
                     )
                 })

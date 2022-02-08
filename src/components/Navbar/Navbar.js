@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import './Navbar.css'
 import SearchIcon from '@mui/icons-material/Search';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 
@@ -42,7 +43,9 @@ const Navbar = () => {
     return (
         <Nav>
             <Buttons>
-                <Button className="active">Coins</Button>
+                <Link to="/">
+                    <Button className="active">Coins</Button>
+                </Link>
                <Button>Portfolio</Button>
             </Buttons>
             <Forms>

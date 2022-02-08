@@ -1,8 +1,8 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {Navbar} from 'components';
-import {Home} from 'pages';
-import {Coin} from 'pages';
+import {Home, Coin} from 'pages';
+// import {Coin} from 'pages';
 import styled from 'styled-components';
 
 const Container = styled.div`
