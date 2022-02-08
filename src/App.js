@@ -19,7 +19,7 @@ function App() {
       <Container>
         <Switch>
           <Route path="/" component={Home} />
-          <Route path="/:coinId" component={Coin} />
+          <Route path="/:coin" component={Coin} />
         </Switch>
       </Container>
    </Router>
